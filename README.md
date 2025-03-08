@@ -1,7 +1,7 @@
 Modern Animated Website
 
 *NOTE: a bug appears for sticky on scrolling to avoid it, at the starting of the page put your cursor on the navbar area and then scroll, hover over whichever section you want to see the animation*
-
+*NOTE: if main is changed from class to id, sticky will work but hover circle wont and vice versa*
 Overview
 
 This project is a modern, animated website. It features smooth animations, interactive elements, and a visually appealing layout to enhance user engagement.
