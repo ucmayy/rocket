@@ -157,13 +157,21 @@ nav #nav-part2 {
 #nav-part2 #links a:hover span {
     color: white !important;
 }
+.main {
+    position: relative; /* So that absolutely positioned elements inside work correctly */
+    overflow: visible;  /* Ensure that child elements aren’t clipped */
+  }
+  .img-container, .img-container .play {
+    pointer-events: auto;
+  }
+    
 #motion {
     min-height: 100vh;
     width: 100%;
     background-color: black;
     display: flex;
     align-items: flex-start;
-    padding: 4vw;
+    padding: 0 4vw;
     justify-content: space-between;
     position: relative;  
 }
@@ -175,19 +183,18 @@ nav #nav-part2 {
     position: sticky;
     top: 0;
 }
-
-  #motion-right {
+#motion-right {
     margin-top: 60vh;
     width: 40%;
     padding-left: 3vw;
     display: flex;
     flex-direction: column;
   }
-  
 
-  #card-area>h6{
+.card-area>h6{
     margin-top: 30px;
   }
+  
 #motion-left h1 {
     font-size: 6vw;
     font-weight: 500;
@@ -227,23 +234,23 @@ nav #nav-part2 {
     overflow: hidden;
   }
   .img-container .play {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
     z-index: 50;
     padding: 3vw 2.2vw;
     background-color: black;
     color: #fff;
     font-size: 1.3vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
   }
+  
   
   
   .box {
@@ -255,6 +262,7 @@ nav #nav-part2 {
     align-items: center;
     justify-content: center;
   }
+  
   
   .box img {
     width: 100%;
@@ -341,7 +349,7 @@ footer{
     align-items: flex-start;
     background-color: black;
     color: white;
-    padding: 5vw;
+    padding: 0 5vw;
     flex-wrap: wrap;
     border-top: 1px solid white;
 }
